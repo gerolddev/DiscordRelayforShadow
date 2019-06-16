@@ -14,16 +14,17 @@ client.on("message", (message) => {
   if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 
 // Makes the commands case insensitive
-  message.content = message.content.toLowerCase();
+  var msg = message.content.toLowerCase();
+  var reply = message.reply
 // Main text commands for bot
-  if (message.content.startsWith(config.prefix + "help")) {
+  if (msg.startsWith(config.prefix + "help")) {
     helpCmd.halpMe(message);
-  } else if (message.content.startsWith(config.prefix + "ping")) {
-    message.reply("pong!");
-  } else if (message.content.startsWith(config.prefix + "foo")) {
-    message.reply("bar!");
-  } else if (message.content.startsWith(config.prefix + "hello there")) {
-    message.reply("You're a bold one!", {
+  } else if (msg.startsWith(config.prefix + "ping")) {
+    reply("pong!");
+  } else if (msg.startsWith(config.prefix + "foo")) {
+    reply("bar!");
+  } else if (msg.startsWith(config.prefix + "hello there")) {
+    reply("You're a bold one!", {
       files: [
         "./images/generalkenobi.gif"
       ]
