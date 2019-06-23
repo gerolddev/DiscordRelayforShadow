@@ -1,7 +1,11 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./auth.json");
+
+// Command files
 const helpCmd = require("./commands/halp.js");
+const countdown = require("./commands/countdown.js");
+const kenobi = require("./commands/hellothere.js");
 
 client.on("ready", () => {
   console.log("Ready to rock and/or roll");
@@ -19,17 +23,10 @@ client.on("message", (message) => {
 // Main text commands for bot
   if (msg.startsWith(config.prefix + "help")) {
     helpCmd.halpMe(message);
-  } else if (msg.startsWith(config.prefix + "ping")) {
-    reply("pong!");
-  } else if (msg.startsWith(config.prefix + "foo")) {
-    reply("bar!");
   } else if (msg.startsWith(config.prefix + "hello there")) {
-    reply("You're a bold one!", {
-      files: [
-        "./images/generalkenobi.gif"
-      ]
-    });
+    kenobi.hallo(message);
   }
-});
+}
+);
 
 client.login(config.token);
