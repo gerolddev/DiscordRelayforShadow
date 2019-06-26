@@ -6,6 +6,7 @@ const config = require("./auth.json");
 const helpCmd = require("./commands/halp.js");
 const countdown = require("./commands/countdown.js");
 const kenobi = require("./commands/hellothere.js");
+const clock = require("./commands/clock.js");
 
 client.on("ready", () => {
   console.log("Ready to rock and/or roll");
@@ -23,8 +24,10 @@ client.on("message", (message) => {
 // Main text commands for bot
   if (msg.startsWith(config.prefix + "help")) {
     helpCmd.halpMe(message);
-  } else if (msg.startsWith(config.prefix + "hello there")) {
+  } else if (msg.startsWith(config.prefix + "hello")) {
     kenobi.hallo(message);
+  } else if (msg.startsWith(config.prefix + "time")) {
+    clock.currentTime(message);
   }
 }
 );

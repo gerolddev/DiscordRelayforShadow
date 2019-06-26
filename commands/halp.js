@@ -10,11 +10,12 @@ message so that channels will be clear of bot spam.
 
 exports.halpMe = function (message) {
         message.author.send(`
-          
+
 The following commands are available to use with me:
 
 help - lists all available commands
-Hello there - You're a bold one!
+hello - You're a bold one!
+time - Gives timestamp for current time
 
 make sure to preface every command with . (dot)!`).catch(console.error);
   }
