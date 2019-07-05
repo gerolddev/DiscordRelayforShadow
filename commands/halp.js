@@ -15,7 +15,7 @@ The following commands are available to use with me:
 
 help - lists all available commands
 hello - You're a bold one!
-time - Gives timestamp for current time
+potter - It's a magical place
 
 make sure to preface every command with . (dot)!`).catch(console.error);
   }
