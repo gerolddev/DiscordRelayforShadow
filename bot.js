@@ -8,7 +8,6 @@ const giphy = require("giphy-api")(config.giphyApiKey);
 const helpCmd = require("./commands/halp.js");
 const countdown = require("./commands/countdown.js");
 const kenobi = require("./commands/hellothere.js");
-const clock = require("./commands/clock.js");
 const harryPotter = require("./commands/potter.js");
 
 client.on("ready", () => {
