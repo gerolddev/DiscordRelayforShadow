@@ -3,14 +3,14 @@ const config = require("../auth.json");
 const giphy = require("giphy-api");
 const request = require("Request");
 
-// Calls random gif with specific tag from giphy
 
 let apiKey = config.giphyApiKey;
-let tag = 'hello';
+let tag = 'harry potter';
 let api = `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=${tag}&rating=G`
 
 
-exports.hallo = function (message) {
+
+exports.potter = function (message) {
   request(`https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=${tag}&rating=G`, function (err, response, body, data, embed_url) {
     if(err){
       console.log('error:', error);
