@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./auth.json");
-const Request = require("Request");
+const Request = require("request");
 const giphy = require("giphy-api")(config.giphyApiKey);
 
 // Command files

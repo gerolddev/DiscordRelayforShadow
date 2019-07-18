@@ -1,7 +1,7 @@
 const Discord = require("Discord.js");
 const config = require("../auth.json");
 const giphy = require("giphy-api");
-const request = require("Request");
+const request = require("request");
 
 
 let apiKey = config.giphyApiKey;
